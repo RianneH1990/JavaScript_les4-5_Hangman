@@ -12,7 +12,7 @@ test("displayWordSoFar should display an underscore followed by a space for each
   expect(displayedWord).toBe("_ _ _ _ _ _ _ _ _ _ ");
 });
 
-test("displayWordSoFar should display the letters guessed so far", () => {
+test.only("displayWordSoFar should display the letters guessed so far", () => {
   // ARRANGE
   const word = "javascript";
   const guesses = ["a", "t", "i", "b", "k"];
