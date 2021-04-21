@@ -37,10 +37,10 @@ function displayWordSoFar(word, guesses) {
 }
 
 function isGameWon(word, guesses) {
-  const splitLettersArray = word.split("");
+  const wordSplit = word.split("");
 
-  for (let i = 0; i < splitLettersArray.length; i++) {
-    const letterInWord = splitLettersArray[i];
+  for (let i = 0; i < wordSplit.length; i++) {
+    const letterInWord = wordSplit[i];
     const letterGuessedArray = guesses.includes(letterInWord);
 
     if (!letterGuessedArray) {
@@ -51,7 +51,24 @@ function isGameWon(word, guesses) {
 }
 
 function isGameLost(word, guesses) {
-  // WRITE ME
+  let mistakes = 0;
+  //console.log("MISTAKES:", mistakes);
+  for (let i = 0; i < guesses.length; i++) {
+    const guess = guesses[i];
+    //console.log("ONE GUESS IN LOOP: ", guess);
+    const isGuessCorrect = word.includes(guess);
+    //console.log("GEUSS CORRECT?:",  isGuessCorrect);
+    if (!isGuessCorrect) {
+      mistakes = mistakes + 1;
+    }
+    //console.log("Mistakes count: ", mistakes);
+  }
+  const maxMistakeCount = 7;
+  if (mistakes >= maxMistakeCount) {
+    return true;
+  }else {
+    return false;
+  }
 }
 
 module.exports = {
