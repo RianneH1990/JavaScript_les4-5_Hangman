@@ -52,16 +52,13 @@ function isGameWon(word, guesses) {
 
 function isGameLost(word, guesses) {
   let mistakes = 0;
-  //console.log("MISTAKES:", mistakes);
+
   for (let i = 0; i < guesses.length; i++) {
     const guess = guesses[i];
-    //console.log("ONE GUESS IN LOOP: ", guess);
     const isGuessCorrect = word.includes(guess);
-    //console.log("GEUSS CORRECT?:",  isGuessCorrect);
     if (!isGuessCorrect) {
       mistakes = mistakes + 1;
     }
-    //console.log("Mistakes count: ", mistakes);
   }
   const maxMistakeCount = 7;
   if (mistakes >= maxMistakeCount) {
