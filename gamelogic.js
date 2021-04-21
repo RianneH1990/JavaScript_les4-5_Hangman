@@ -31,6 +31,9 @@ function displayWordSoFar(word, guesses) {
       output = output + "_ ";
       //console.log(output);
     }
+    else if (letterGuessed) {
+      output = output + letterInWord + " ";
+      console.log(output);
     }
   return output;
 }
