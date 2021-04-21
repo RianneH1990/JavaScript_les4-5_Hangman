@@ -47,6 +47,7 @@ function isGameWon(word, guesses) {
       return false;
     }
   }
+  return true;
 }
 
 function isGameLost(word, guesses) {
