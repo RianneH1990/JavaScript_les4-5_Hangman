@@ -24,7 +24,7 @@ test("displayWordSoFar should display the letters guessed so far", () => {
   expect(displayedWord).toBe("_ a _ a _ _ _ i _ t ");
 });
 
-test.only("isGameWon should return false when all letters have not been guessed yet", () => {
+test("isGameWon should return false when all letters have not been guessed yet", () => {
   // ARRANGE
   const word = "javascript";
   const guesses = [];
@@ -48,7 +48,7 @@ test("isGameWon should return true when all letters have been guessed", () => {
   expect(gameWon).toBe(true);
 });
 
-test("isGameLost should return true if you've guessed 7 wrong letters or more", () => {
+test.only("isGameLost should return true if you've guessed 7 wrong letters or more", () => {
   // ARRANGE
   const word = "javascript";
   const guesses = ["q", "w", "e", "y", "u", "o", "d"];

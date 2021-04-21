@@ -37,14 +37,12 @@ function displayWordSoFar(word, guesses) {
 }
 
 function isGameWon(word, guesses) {
-  //console.log("WORD: ", word, "GUESSES: ", guesses);
   const splitLettersArray = word.split("");
-  console.log("SPLIT LETTERS: ", splitLettersArray);
+
   for (let i = 0; i < splitLettersArray.length; i++) {
     const letterInWord = splitLettersArray[i];
-    console.log("LOOP THE LETTERS: ", letterInWord)
     const letterGuessedArray = guesses.includes(letterInWord);
-    console.log("IS LETTER GUESSED: ", letterGuessedArray);
+
     if (!letterGuessedArray) {
       return false;
     }
