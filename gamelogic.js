@@ -1,21 +1,3 @@
-// Input:
-// word: javascript
-// guesses: ["a", "t", "i", "b", "k"]
-
-// Output:
-// _ a _ a _ _ _ i _ t
-
-// DOEL:
-// WOORD: javascript, GUESSES: [] -> "_ _ _ _ _ _ _ _ _ _ "
-// WOORD: javascript, GUESSES: ['a', 'b'] -> "_ a _ a _ _ _ _ _ _ "
-
-// - [x] javascript "splitten" split() -> ['j','a','v','a','s','c','r','i','p','t']
-// - [x] een loop maken -> ['j','a','v','a','s','c','r','i','p','t']
-// - [x] checken: zit de letter in guesses?
-// - [x] if else
-// - [x] zo nee: "_ "
-// - [x] zo ja: "j " (niet j, maar de letter die we dan checken)
-// - [ ] klaar? -> onze string die we hebben gemaakt returnen
 
 function displayWordSoFar(word, guesses) {
   const wordSplit = word.split("");
